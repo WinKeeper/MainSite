@@ -1,0 +1,853 @@
+@font-face {
+	font-family: "Open Sans";
+	font-style: normal;
+	font-weight: 400;
+    src: url('../fonts/OpenSans-Regular.ttf') format('ttf');
+}
+
+@font-face {
+	font-family: "Open Sans";
+	font-style: normal;
+	font-weight: 800;
+	src: url('../fonts/OpenSans-ExtraBold.ttf') format('ttf');
+}
+
+@font-face {
+	font-family: "Open Sans";
+	font-style: normal;
+	font-weight: 600;
+	src: url('../fonts/OpenSans-SemiBold.ttf') format('ttf');
+}
+
+/*src: url('../fonts/OpenSans-ExtraBoldItalic.ttf');
+    src: url('../fonts/OpenSans-Bold.ttf');*/
+
+body {
+	display: flex;
+	flex-direction: column;
+/*	flex-wrap: wrap;*/
+/*	background-color: #F6F2F2;*/
+	margin: 0 auto;
+/* 	min-width: 1580px; */
+	font-family: "Open Sans"; /*Общий шрифт на странице*/
+	line-height: 28px; /*Общая высота строки для текста на странице*/
+}
+
+h2 {
+	display: flex; /*Не уверен, что корректно задавать Flex свой-ство для заголовка*/
+	margin:0 0 36px 0;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 42px;
+	line-height: 55px; /*Межстрочное расстояние*/
+	letter-spacing: 1.5px;
+	max-height: 87px;	
+}
+
+/* Первый блок - backgroundcolor */
+
+.first-block {
+	width: 100vw;
+	background-color: #F6F2F2;
+	margin: 0 auto;
+}
+
+
+.header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #000000;
+	/*text-align: center;*/
+	max-width: 1250px;
+	margin: 0 auto;
+/*	padding: 0 23%;*/
+}
+
+.site-menu {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+/*	justify-content: space-around;*/
+}
+
+.site-menu a {
+	display: flex;
+	align-items: stretch;
+	padding: 40px 55px 30px 0px;
+	color: #FFFFFF;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	text-transform: uppercase;
+	text-decoration: none;
+    text-align: center;
+}
+
+a:hover {
+	background-color: red;
+	border-radius: 10px;
+}
+
+/* Про организацию */
+
+.about {
+	display: flex;
+	background-color: #F6F2F2;
+	max-width: 1250px;
+	margin: 0 auto;
+	padding: 86px 0px 73px 0px;
+}
+
+.about-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+/* 	width: 46%; */
+}
+
+.about-wrapper h1 {
+	display: flex;
+	align-items: center;
+	margin: 0;
+	font-weight: 800;
+	text-transform: uppercase;
+	font-size: 60px;
+	line-height: 72px;
+	letter-spacing: 5px;
+}
+
+.about-wrapper p {
+	font-weight: 600;
+	font-size: 16px;
+	margin-top: 20px;
+	margin-bottom: 63px;
+/* 	width: 80%; */
+	min-height: 73px;
+	padding-right: 100px;
+}
+
+.contact-link {
+	color: #FFFFFF;
+	text-align: center;
+	max-width: 25%;
+	min-height: 30px;
+	background-color: #FF2D2D;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	text-decoration: none;
+	padding: 10px 30px;
+	border-radius: 10px;
+}
+
+.main-image {
+	display: flex;
+/* 	justify-content: flex-end; */
+/* 	align-items: center; */
+	width: 30%;
+	height: 95%;
+}
+
+.about img {
+	width: 550px;
+	height: 385px;
+	padding-left: 124px;
+}
+
+@media screen and (max-width: 1200px) {
+	.about {
+		flex-wrap: wrap;
+	}
+	.about img {
+		padding: 20px 0 0 0;
+	}
+	.about-wrapper {
+		max-width: 50%;
+	}
+	.about-wrapper p {
+		padding: 0;
+	}
+}
+
+/* Второй блок - продукты*/
+
+.second-block {
+	display: flex;
+	justify-content: space-between;
+	max-width: 1250px;
+	align-self: center; 
+	margin: 147px auto -9px auto;
+}
+
+.product-block-wrapper {
+	display: flex;
+	background-color: #FFFFFF;
+}
+
+.about-product-wrapper {
+	display: flex;
+	flex-flow: column nowrap;
+	width: 53%;
+	max-height: 588px;
+}
+
+.product-text {
+	font-weight: 600;
+	font-size: 16px;
+	margin-bottom: 88px;
+	width: 80%;
+	min-height: 73px;
+}
+
+.about-product-wrapper a {
+	text-align: center;
+	width: 25%;
+	min-height: 30px;
+	background-color: #FFFFFF;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 18px;
+	text-decoration: none;
+	padding: 10px 30px;
+	border: 2px solid red;
+	border-radius: 10px;
+}
+
+.about-product-wrapper h2 {
+	display: flex;
+	margin:0 0 36px 0;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 42px;
+	line-height: 55px; /*Межстрочное расстояние*/
+	letter-spacing: 1.5px;
+	max-height: 87px;	
+}
+
+.product-type-wrapper {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	flex:1 1;
+/* 	width: 50%; */
+	min-height: 588px;
+
+}
+
+/*Необходимо дабавить свойство nowrap когда уменьшаем ширину*/
+
+.product-type-wrapper p {
+	margin: 0;
+}
+
+.product-type-wrapper h3 {
+	margin: 44px 0 10px 0;
+	font-weight: 700;
+}
+
+.management-wrapper {
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+	flex:1 1 288px;
+/* 	width: 48%;
+	height: 48%; */
+}
+
+.design-wrapper {
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+	flex:1 1 288px;
+/* 	width: 48%;
+	height: 48%; */
+}
+
+.branding-wrapper {
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+	flex:1 1 288px;
+/* 	width: 48%;
+	height: 48%; */
+}
+
+.animation-wrapper {
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+	flex:1 1 288px;
+/* 	width: 48%;
+	height: 48%; */
+}
+
+@media screen and (max-width: 900px) {
+	.product-block-wrapper {
+		flex-wrap: wrap;
+	}
+	.product-type-wrapper {
+		padding: 25px 0 0 0;
+	}
+}
+
+/* Третий блок - продукция и услуги*/
+
+.feature-block-wrapper {
+	display: flex;
+	flex-flow: column wrap;
+	align-items: center;
+	background-color: #FFFFFF;
+	max-width: 1250px;
+	margin: 0px auto 124px auto;
+}
+
+.third-block-line {
+	padding: 0 5vw;
+	margin-bottom: 104px;
+	width: 80%;
+	color: #ECECEC;
+}
+
+.feature-header {
+	display: flex;
+	flex-flow: column wrap;
+}
+
+.feature-header h2 {
+	justify-content: center;
+	margin-bottom: 10px;
+}
+
+.feature-header p {
+	margin-top: 0px;
+	margin-bottom: 29px;
+}
+
+.feature-header hr {
+	margin-top: 28px;
+	margin-bottom: 86px;
+}
+
+.feature-menu {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	margin-bottom: 50px;
+}
+
+.feature-menu a {
+	text-decoration: none;
+}
+
+feature-menu: hover {
+	color: blue;
+}
+
+.feature-menu h3 {
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 22px;
+	margin:0 25px 0 25px;
+}
+
+.feature-images {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
+	min-width: 1250px;
+}
+
+.feature-images a {
+	justify-content: center;
+
+	width: 24%;
+	min-height: 293px;
+	margin: 6px;
+
+/*	flex: 1 1 24%;
+	margin: 6px;*/
+
+	background-color: blue;
+	}
+
+/* Четвёртый блок - портфолио*/
+
+.our-team-block {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	background-color: #FFFFFF;
+	min-height: 718px;
+	max-width: 1250px;
+	margin: 0px auto 111px auto;
+}
+
+.our-team-header {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	width: 35%;
+	min-height: 588px;
+}
+
+.our-team-header h2 {
+	margin: 0;
+}
+
+.our-team-header p {
+	margin: 17px 0 80px 0;
+}
+
+.our-team-header hr {
+	margin-bottom: 70px;
+	margin-left: 0;
+}
+
+.main-photo {
+	display: flex;
+	align-items: stretch;
+	background-color: #F55A5A;
+	height: 100%;
+	width: 75%;
+}
+
+.main-photo img {
+	height: 100%;
+	width: 100%;	
+}
+
+.main-photo a {
+	height: 100%;
+	width: 100%;	
+}
+
+.portfolio-wrapper {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-end;
+	width: 76%;
+/*	height: 50%; почему при выставлении Высоты не работает justify?*/ 
+}
+
+.portfolio-header {
+	display: flex;
+	flex-flow: column wrap;
+	width: 50%
+	height: 50%;
+}
+
+.portfolio-header h3 {
+	font-size: 30.127px;
+	font-weight: 600;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+.portfolio-header p {
+	margin: 23px 0 67px 0;
+}
+
+.personal-social-link {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	margin-bottom: 57px;
+}
+
+.personal-social-link a {
+	font-style: italic;
+	text-decoration: none;
+	font-size: 20px;
+	margin-right: 35px;
+}
+
+.small-photos {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	height: 30%;
+}
+
+.small-photos a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 39px;
+
+	position: relative; /*Как спозиционировать?? */
+	top: -47px;
+
+	text-align: center;
+	font-weight: 600;
+	font-size: 18.0762px;
+	text-decoration: none;
+	text-transform: uppercase;
+	background-color: #C22222;
+	color: white;
+	opacity: 0.8; 
+}
+
+.first-photo {
+	height: 100%;
+	width: 23%;
+	background-color: #F55A5A;
+}
+
+.first-photo img {
+	height: 100%;
+	width: 100%;
+}
+
+
+.second-photo {
+	height: 100%;
+	width: 23%;
+	background-color: #F55A5A;
+}
+
+.second-photo img {
+	height: 100%;
+	width: 100%;
+}
+
+.third-photo {
+	height: 100%;
+	width: 23%;
+	background-color: #F55A5A;
+}
+
+.third-photo img {
+	height: 100%;
+	width: 100%;
+}
+
+.fourth-photo {
+	height: 100%;
+	width: 23%;
+	background-color: #F55A5A;
+}
+
+.fourth-photo img {
+	height: 100%;
+	width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+	.our-team-block {
+		flex-wrap: wrap;
+	}
+	.portfolio-wrapper {
+		padding: 25px 0 0 0;
+	}
+}
+
+/*Пятый блок - подписка*/
+
+.subscribe-block {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	background-color: #2C2C2C;
+	min-height: 510px;
+	margin-bottom: 96px;
+}
+
+.subscribe-header {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+/*	justify-content: center;*/
+}
+
+.subscribe-header h3 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 158px 0 0 0;
+	font-weight: 600;
+	font-size: 42px;
+	line-height: 24px;
+	letter-spacing: 4.05px;
+	color: white;
+}
+
+.subscribe-header p {
+	color: white;
+	margin: 25px 0px 56px 0px;
+}
+
+.email-input {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	width: 100%;
+	height: 50%;
+}
+
+.client-email form {
+	display: flex;
+}
+
+.client-email input {
+	padding: 17px 300px 20px 20px;
+	width: 32%;
+	background-color: white;
+	margin-right: 20px;
+	border-radius: 10px;
+	font-style: italic;
+	font-size: 14px;
+}
+
+.client-email button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-weight: 600;
+	text-decoration: none;
+	text-transform: uppercase;
+	height: 100%;
+	width: 100%;
+	border-radius: 10px;
+	background-color: #FF3B3B;
+	padding: 0px 50px;
+}
+
+/*.subscribe-button {
+	width: 13%;
+	background-color: #FF3B3B;
+	text-align: center;
+	border-radius: 10px;
+}
+
+.subscribe-button button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-weight: 600;
+	text-decoration: none;
+	text-transform: uppercase;
+	height: 100%;
+	width: 100%;
+	border-radius: 10px;
+	background-color: #FF3B3B;
+}*/
+
+/*Шестой блок - форма обращения/контактная информация*/
+
+
+.contact-form-block {
+	display: flex;
+	flex-direction: row;
+	align-self: center;
+	background-color: #FFFFFF;
+/*	min-height: 600px;
+	max-width: 1580px;*/
+	margin: 0 auto 110px auto;
+}
+
+.contact-form-wrapper {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	height: 100%;
+	width: 54%;
+	padding-left: 163px;
+}
+
+.contact-form-header {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.contact-form-header h2 {
+	margin: 0;
+}
+
+.contact-form-header p {
+	margin: 29px 0 72px 0;
+	width: 95%;
+}
+
+.contact-form-header hr {
+	margin-bottom: 73px;
+	margin-left: 0;
+}
+
+.contact-information-wrapper {
+	display: flex;
+	flex-flow: column nowrap;
+	height: 50%;
+	width: 95%;
+	justify-content: space-between;
+}
+
+.contact-information-input {
+	display: flex;
+	width: 90%;
+	justify-content: space-between;
+}
+
+.contact-information-input input {
+	display: flex;
+	background-color: #EDECEC;
+	padding: 20px 0px 20px 0px;
+	width: 48%;
+	border-radius: 10px;
+}
+
+.message-input input {
+	background-color: #EDECEC;
+	padding: 31px 0px 150px 0px;
+	width: 90%;
+	margin: 43px 0 41px 0;
+	border-radius: 10px;
+	text-align: left;
+}
+
+.send-button button {
+	background-color: #FF3B3B;
+	height: 75px;
+	width: 90%;
+	border-radius: 10px;
+	align-items: center;
+	color: white;
+	font-weight: 600;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.contact-info {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-self: flex-end;
+	background-color: #2C2C2C;
+	color: white;
+	width: 50vw;
+	min-height: 500px;
+	padding-left: 81px;
+}
+
+.contact-info h3 {
+	text-transform: uppercase;
+}
+
+/*Footer - */
+
+.footer-block {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	min-height: 113px;
+	min-width: 100vw;
+	background-color: #2C2C2C;
+	margin: 0 auto;
+/*	position: fixed;
+	bottom: 0; Аааа прижать xD*/
+}
+
+.footer-block p {
+	color: #B8B8B8;
+	margin-left: 200px;
+	margin-right: 800px;
+}
+
+.social-icons {
+	margin-right: 180px;
+}
+
+.social-icons a {
+	max-width: 40px;
+	max-height: 40px;
+	border-radius: 35px;
+}
+
+.social-icons img {
+	max-width: 40px;
+	max-height: 40px;
+	background-color: white;
+	border-radius: 35px;
+}
+
+
+
+
+
+	flex-basis: 25%;
+  	max-width: 25%;
+
+  	border: 1px solid red;
+
+  	flex: 1 1 50%;
+
+  	@media screen and (max-width: 700px)
+  	. что то 
+  		новые свойства объекта
+
+
+ .name-contactform-input {
+	background-color: #EDECEC;
+	height: 72px;
+	width: 48%;
+	border-radius: 10px;
+}
+
+/*.email-contactform-input {
+	background-color: #EDECEC;
+	height: 72px;
+	width: 48%;
+	border-radius: 10px;
+}
+
+.message-input {
+	background-color: #EDECEC;
+	height: 252px;
+	width: 90%;
+	margin: 43px 0 41px 0;
+	border-radius: 10px;
+}
+
+.send-button {
+	background-color: #FF3B3B;
+	height: 75px;
+	width: 90%;
+	border-radius: 10px;
+}
+
+.send-button a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-weight: 600;
+	text-decoration: none;
+	text-transform: uppercase;
+	height: 100%;
+	width: 100%;
+}
+
+.contact-info {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-self: flex-end;
+	background-color: #2C2C2C;
+	color: white;
+	width: 32%;
+	min-height: 500px;
+	padding-left: 81px;
+}
+
+.contact-info h3 {
+	text-transform: uppercase;
+}*/
